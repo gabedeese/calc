@@ -1,0 +1,93 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #1e1e1e;
+  font-family: Arial, sans-serif;
+}
+
+#main {
+  background: #2c2c2c;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  width: 260px;
+}
+
+/* Screen */
+#screen {
+  background: black;
+  color: lime;
+  height: 60px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+  font-size: 1.8rem;
+}
+
+/* Layout rows */
+#main > div:not(#screen) {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* Buttons base */
+button {
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.1s, background 0.2s;
+}
+
+/* Press effect */
+button:active {
+  transform: scale(0.95);
+}
+
+/* Number buttons */
+.numbers {
+  background: #444;
+  color: white;
+}
+
+.numbers:hover {
+  background: #555;
+}
+
+/* Operator buttons */
+.operators {
+  background: orange;
+  color: white;
+}
+
+.operators:hover {
+  background: darkorange;
+}
+
+/* Extra buttons (AC, C, +/-) */
+.extras {
+  background: #888;
+  color: black;
+}
+
+.extras:hover {
+  background: #aaa;
+}
+
+/* Make 0 button wider */
+#row-5 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#row-5 button:first-child {
+  grid-column: span 2;
+}
