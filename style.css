@@ -27,6 +27,7 @@ body {
   justify-content: flex-end;
   padding: 10px;
   font-size: 1.8rem;
+  white-space: pre;
 }
 
 /* Layout rows */
